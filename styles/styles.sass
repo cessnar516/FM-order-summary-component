@@ -1,0 +1,117 @@
+// COLORS
+$primary: hsl(220, 23%, 48%)
+$secondary: hsl(245, 75%, 52%)
+$highlight: hsl(225, 100%, 98%)
+$background: hsl(225, 100%, 94%)
+$base-text-color: hsl(223, 47%, 23%)
+$footer-link-color: hsl(228, 45%, 44%)
+
+// TYPOGRAPHY
+$base-font-size: 16px
+$base-font-family: 'Red Hat Display', sans-serif
+
+// SCREEN SIZES
+$screen-mobile: 375px
+$screen-desktop: 1000px
+
+*
+    box-sizing: border-box
+    &::before, &::after
+        box-sizing: inherit
+
+img
+    width: 100%
+    height: auto
+
+body
+    font-family: $base-font-family
+    font-size: $base-font-size
+    color: $base-text-color
+    margin: 0
+    padding: 4em 2em
+    background: $background
+    background-image: url("../images/pattern-background-mobile.svg")
+    background-repeat: no-repeat
+    background-size: contain
+    display: flex
+    flex-direction: column
+    justify-content: center
+    @media screen and (min-width: $screen-desktop)
+        background-image: url("../images/pattern-background-desktop.svg")
+h1
+    text-align: center
+    margin-bottom: 1.4em
+a:hover
+    cursor: pointer
+a:focus
+    outline: 1px solid $footer-link-color
+.orderCard
+    background: white
+    border-radius: 1em
+    overflow: hidden
+    text-align: center
+    max-width: 400px
+    margin: 0 auto
+    box-shadow: 0px 20px 20px 0px hsla(245, 75%, 52%, .15)
+.cardContent
+    padding: 5% 8% 10%
+    p
+        color: $primary
+        line-height: 1.7
+.planInfo
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background: $highlight
+    padding: 1em
+    margin: 1.5em 0
+    border-radius: 1em
+    a
+        font-size: .8em
+        font-weight: bold
+        color: $secondary
+        &:hover, &:focus
+            opacity: .7
+            text-decoration: none
+.planPricing
+    display: flex
+    text-align: left
+    flex-basis: 62%  
+    align-items: center
+    img
+        width: 45px
+        height: 45px
+        margin-right: 10%
+    h3
+        margin: 0
+        font-size: .9em
+    p
+        margin: 0
+        font-size: .9em
+
+.payment, .cancel
+    display: block
+    font-weight: bold
+    text-decoration: none
+    font-size: .9em
+.payment
+    color: white
+    background-color: $secondary
+    padding: 1em
+    border-radius: 1em
+    box-shadow: 0px 15px 15px 0px hsla(245, 75%, 52%, .2)
+    margin-bottom: 1.5em    
+    &:hover, &:focus
+        opacity: .7
+.cancel
+    color: $primary
+    &:hover, &:focus
+        color: $base-text-color
+footer
+    margin-top: 4em
+    font-size: 0.7rem
+    text-align: center
+    a
+        color: $footer-link-color
+        &:hover
+            text-decoration: none
